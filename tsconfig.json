@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"target": "es2017",
+		"sourceMap": true,
+		"skipLibCheck": true,
+		"outDir": "./dist",
+		"incremental": true,
+		"baseUrl": "./",
+		"paths": {
+			"@auth/*": ["src/modules/auth/*"],
+			"@user/*": ["src/modules/user/*"],
+			"@post/*": ["src/modules/post/*"],
+			"@guards/*": ["src/lib/guards/*"],
+			"@strategies/*": ["src/lib/strategies/*"]
+		}
+	},
+	"exclude": ["node_modules", "dist"]
+}
