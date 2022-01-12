@@ -15,7 +15,7 @@ const createGuard = (strategy: string) => {
 			const res = context.switchToHttp().getResponse();
 
 			if (error) {
-				res.redirect(`http://localhost:3000/auth/register?error=${error}&status=${status}`);
+				res.redirect(`${process.env.CLIENT_REGISTER_FAIL_URL}?error=${error}&status=${status}`);
 				throw new HttpException(error, error.status);
 			}
 
